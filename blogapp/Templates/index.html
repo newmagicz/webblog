@@ -19,7 +19,7 @@
 <body>
     
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Blog ผลงาน</a>
+        <a class="navbar-brand" href="#">Blog ไม้ด่างที่นิยม</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,10 +31,7 @@
             </li>
             
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+         
         </div>
       </nav>
 
@@ -44,60 +41,41 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
           <div class="container">
-            <h1 class="display-3">ผลงานและงานวิจัย</h1>
+            <h1 class="display-3" >ไม้ด่างที่นิยม</h1>
             
           </div>
         </div>
-      
-        <div class="container">
-          <!-- Example row of columns -->
-          <div class="row">
-            {% for post in test %}
-            <div class="row pb-3">
-                <div class="card">
-                    <div class="card-header">
-                        ผลงานและงานวิจัย
-                    
-                    <div class="card-body">
-                    <h5 class="card-title">{{post.title}}</h5>
-                    <p class="card-text">{{post.body}}</p>
-                    </div>
-                </div>
               
-            </div>
-            {% endfor %}
-          </div>
-      
-          <hr>
-      
-        </div> <!-- /container -->
-      
       </main>
       
-      <footer class="container">
+
+      <div class="row">
+
+        {% for post in test %}
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+            <div class="card-body">
+              <h5 class="card-title" style="color: green;">{{post.title}}</h5>
+                    <p class="card-text">{{post.body}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      
+       
+            
+          </div>
+        </div>
+      </div>
+
+
+
+      <footer class="container" style="right: auto;">
         <p>&copy; ICT STOU 2022</p>
       </footer>
-
-
-
-<br>
-    <table border="1" style="width: 50%;" >
-    <tr> 
-    <td colspan="2" bgcolor="lightblue">   
-    <center><h1> ผลงานและงานวิจัย </h1>
-    </td>>
-    </tr>
-    {% for post in test %}
-    <tr>
-        <td style="width: 20%;">
-   <center> <h2>{{post.title}}</h2>
-</td>
-<td>
-    <h2>{{post.body}}</h2>
-</td>
-    
-    {% endfor %}
-    </tr>
-    </table>
 </body>
 </html>
